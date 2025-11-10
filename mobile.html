@@ -1,0 +1,216 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/mobilestyle.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+		<link rel="icon" type="image/png" href="images/icon.png">
+		<title>Salmon simulator</title>
+		<meta name="description" content="grow your Salmon empire">
+		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+		<!-- Google Analytics -->
+		<script>
+		window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+		ga('create', 'UA-92834321-1', 'auto');
+		ga('send', 'pageview');
+		</script>
+		<script async src='https://www.google-analytics.com/analytics.js'></script>
+		<!-- End Google Analytics -->
+		<!-- Google AdSense -->
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1676528148340380" crossorigin="anonymous"></script>
+		<!-- End Google AdSense -->
+	</head>
+	<body>
+		<div id="container">
+			<main>
+				<div id="Salmonsim">
+					Salmon simulator v1.8
+				</div>
+				<div id="time">
+					played for 0:00:00
+				</div>
+
+					<button onclick="ShowLevel()" class="button" style="position:absolute;top:12%;left:75%;z-index:999;padding:1.5vw 2.5vw">level</button>
+				<div id="leveldivmobile">
+				<div id="xptonextlevel">
+					<span style="position:relative;top:10%">xp to next level: <span id="xptonextlevelnumber">20</span></span>
+				</div>
+				<div id="level">
+					<span style="position:relative;top:3%">level: <span id="levelnumber">0</span></span>
+				</div>
+				<div id="bonusdamage">
+					<span style="position:relative;top:3%"><span id="multipliernumber">1x</span> bonus <br>Salmons/sec</span>
+				</div>
+				<div id="bgbar"></div>
+				<div id="bar" style="text-align:center;overflow-x:visible;white-space:nowrap"><span style="position:relative;top:-0.2vw;margin-left:0.5vw">current xp: <span id="xp">0</span></span></div>
+			</div>
+
+				<span id="middleSalmonCounter">Salmons: <span id="Salmons">0</span> <span style="position:relative;bottom:2px;font-size:3vw" id="damageAdded">+ 0/sec</span></span>
+				<button onclick="toggleMusic()" style="position:absolute;top:0.5%;right:6px;background-color:#7c7c7c;color:white;padding:5px 5px">Toggle Music</button>
+				<button onclick="toggleAudio()" style="position:absolute;top:5%;right:6px;background-color:#606060;color:white;padding:5px 5px">Toggle Audio</button>
+				<div class="textContainer">
+					<button onclick="showAllBuildings()" class="button" style="position:absolute;top:12%;left:6%;z-index:999;padding:1.5vw 2.5vw">things</button>
+					<div class="item1">
+						<div style="font-size:6vw;font-weight:bold;position: relative;bottom: 8px">things</div>
+						<div class="buySalmonKid" style="display:none">Salmon Kids: <span id="SalmonKids">0</span> - <span id="SalmonKidTotalDmg">1</span> n/s</div>
+
+						<div class="buySalmonBoy" style="display:none">Salmon Boys: <span id="SalmonBoys">0</span> - <span id="SalmonBoyTotalDmg">1</span> n/s</div>
+
+						<div class="buySalmonMan" style="display:none">Salmon Men: <span id="SalmonMen">0</span> - <span id="SalmonManTotalDmg">1</span> n/s</div>
+
+						<div class="buySalmonPond" style="display:none">Salmon Ponds: <span id="SalmonPonds">0</span> - <span id="SalmonPondTotalDmg">1</span> n/s</div>
+
+						<div class="buySalmonFactory" style="display:none">Salmon Factories: <span id="SalmonFactories">0</span> - <span id="SalmonFactoryTotalDmg">1</span> n/s</div>
+
+						<div class="buySalmonBank" style="display:none">Salmon Banks: <span id="SalmonBanks">0</span> - <span id="SalmonBankTotalDmg">1</span> n/s</div>
+
+						<div class="buySalmonEmpire" style="display:none">Salmon Empires: <span id="SalmonEmpires">0</span> - <span id="SalmonEmpireTotalDmg">1</span> n/s</div>
+
+						<div class="buySalmonWorldControl" style="display:none">Salmon World Control: <span id="SalmonWorldControls">0</span> - <span id="SalmonWorldControlTotalDmg">1</span> n/s</div>
+
+						<div class="buySalmonGalacticReign" style="display:none">Galactic Salmon Reigns: <span id="SalmonGalacticReigns">0</span> - <span id="SalmonGalacticReignTotalDmg">1</span> n/s</div>
+
+						<div class="buyDeezSalmonGuy" style="display:none">Deez Salmon Guys: <span id="deezSalmonGuys">0</span> - <span id="deezSalmonGuyTotalDmg">1</span> n/s</div>
+						<div class="buySalmonTimeTravel" style="display:none">Time Travelling Salmons: <span id="SalmonTimeTravels">0</span> - <span id="SalmonTimeTravelTotalDmg">1</span> n/s</div>
+						
+						<div class="buySalmonUniversalDomination" style="display:none">Universal Salmon Dominations: <span id="SalmonUniversalDominations">0</span> - <span id="SalmonUniversalDominationTotalDmg">1</span> n/s</div>
+						
+						<div class="buySalmonGod" style="display:none">Salmon Gods: <span id="SalmonGods">0</span> - <span id="SalmonGodTotalDmg">1</span> n/s</div>
+						
+						<div class="buySalmonAfterlife" style="display:none">Salmon Afterlives: <span id="SalmonAfterlives">0</span> - <span id="SalmonAfterlifeTotalDmg">1</span> n/s</div>
+						<hr size="1" noshade color=black id="line">
+						<div class="buySalmonBoyBonus" style="display:none">Bigger Salmons: <span id="SalmonBoyBonuses">0</span></div>
+						
+						<div class="buyClick" style="display:none">Powerful Clicks: <span id="clickUpgrades">0</span> - <span id="clickUpgradeDamage">1</span> click bonus</div>
+
+						<div class="buyClick2" style="display:none">Big Boy Clicks: <span id="clickUpgrades2">0</span> - <span id="clickUpgrade2Damage">1</span> click bonus</div>
+
+						<div class="buyAllUpgrade" style="display:none">Salmon Masteries: <span id="allUpgrades">0</span></div>
+						
+						<div class="buyClick3" style="display:none">Nuclear Clicks: <span id="clickUpgrades3">0</span> - <span id="clickUpgrade3Damage">1</span> click bonus</div>
+					</div>
+
+					<button onclick="showAllUpgrades()" class="button" style="position:absolute;top:12%;left:21%;z-index:999;padding:1.5vw 2.5vw">upgrades</button>
+					<div class="item2">
+						<div style="font-size:6vw;font-weight:bold;position: relative;bottom: 8px">upgrades</div>
+						total Salmons/sec: <span id="totalDamage">0</span>
+						<br>
+						Salmons/click: <span id="clickDamage">1</span>
+						<br>
+						<hr size="2" noshade color=black>
+						<button onclick="buy('buySalmonBoyBonus')" id="button" class="buySalmonBoyBonus" style="display:none"><b>Bigger Salmons</b><br>Salmon boy Salmons/sec x <span id="SalmonBoyBonusAmount">2</span><br>- <span id="SalmonBoyBonusCost">100</span> Salmons</button>
+						<br>
+						<button onclick="buy('x2Click')" class="buyClick" style="display:none;background-color: #F5AB35"><b>Powerful Clicking</b><br>click bonus + 15<br>- <span id="clickCost">300</span> Salmons</button>
+						<br>
+						<button onclick="buy('clickUpgrade2')" class="buyClick2" style="display:none;background-color: #87D37C"><b>Big Boy Clicks</b><br>click bonus + 50<br>- <span id="clickCost2">5000</span> Salmons</button>
+						<br>
+						<button onclick="buy('allUpgrade')" class="buyAllUpgrade" style="display:none;background-color: #26A65B"><b>Salmon Mastery</b><br>all except click x 2<br>- <span id="allUpgradeCost">100000</span> Salmons</button>
+						<br>
+						<button onclick="buy('clickUpgrade3')" class="buyClick3" style="display:none;background-color: #03C9A9"><b>Nuclear Clicks</b><br>click bonus x 2<br>- <span id="clickCost3">300000</span> Salmons</button>
+					</div>
+					<div id="newUpgrade">      new upgrade available</div>
+				</div>
+
+				<!--the big Salmon-->
+				<div onmousedown="return false"><!--disable dragging-->
+					<img src="images/icon.png" onmousedown="clickAnimation();clickOnButton()" onmouseup="releaseAnimation();pressed = false" onmouseleave="releaseAnimation();pressed=false" id="middleSalmon">
+					<div id="amountAdded"></div>
+					<div id="addedSalmons">addedSalmons</div>
+				</div>
+
+				<div id="middle">
+					<!--<button onclick="clickOnButton()" class="clickButton" id="middleSalmon">click</button>-->
+					<button onclick="buy('SalmonKid')" class="buySalmonKid" style="display:none;background-color: #EB9532"><b>Salmon Kid</b><br>(+<span id="SalmonKidDamage"> </span> Salmons/sec)<br>- <span id="SalmonKidCost">15</span> Salmons</button>
+					<button onclick="buy('SalmonBoy')" class="buySalmonBoy" style="display:none;background-color: #F39C12"><b>Salmon Boy</b><br>(+<span id="SalmonBoyBonusTotal">1</span> Salmons/sec)<br>- <span id="SalmonBoyCost">50</span> Salmons</button>
+					<button onclick="buy('SalmonMan')" class="buySalmonMan" style="display:none;background-color: #87D37C"><b>Salmon Man</b><br>(+<span id="SalmonManDamage"> </span> Salmons/sec)<br>- <span id="SalmonManCost">1000</span> Salmons</button>
+					<button onclick="buy('SalmonPond')" class="buySalmonPond" style="display:none;background-color: #26A65B"><b>Salmon Pond</b><br>(+<span id="SalmonPondDamage"> </span> Salmons/sec)<br>- <span id="SalmonPondCost">13000</span> Salmons</button>
+					<button onclick="buy('SalmonFactory')" class="buySalmonFactory" style="display:none;background-color: #03C9A9"><b>Salmon Factory</b><br>(+<span id="SalmonFactoryDamage"> </span> Salmons/sec)<br>- <span id="SalmonFactoryCost">150000</span> Salmons</button>
+					<button onclick="buy('SalmonBank')" class="buySalmonBank" style="display:none;background-color: #5C97BF"><b>Salmon Bank</b><br>(+<span id="SalmonBankDamage"> </span> Salmons/sec)<br>- <span id="SalmonBankCost">1400000</span> Salmons</button>
+					<button onclick="buy('SalmonEmpire')" class="buySalmonEmpire" style="display:none;background-color: #1F3A93"><b>Salmon Empire</b><br>(+<span id="SalmonEmpireDamage"> </span> Salmons/sec)<br>- <span id="SalmonEmpireCost">20000000</span> Salmons</button>
+					<button onclick="buy('SalmonWorldControl')" class="buySalmonWorldControl" style="display:none;background-color: #9B59B6"><b>World Salmon Control</b><br>(+<span id="SalmonWorldControlDamage"> </span> Salmons/sec)<br>- <span id="SalmonWorldControlCost">330000000</span> Salmons</button>
+					<button onclick="buy('SalmonGalacticReign')" class="buySalmonGalacticReign" style="display:none;background-color: #F62459"><b>Galactic Salmon Reign</b><br>(+<span id="SalmonGalacticReignDamage"> </span> Salmons/sec)<br>- <span id="SalmonGalacticReignCost">5100000000</span> Salmons</button>
+					<button onclick="buy('deezSalmonGuy')" class="buyDeezSalmonGuy" style="display:none;background-color: #F22613"><b>Deez Salmon Guy</b><br>(+<span id="deezSalmonGuyDamage"> </span> Salmons/sec)<br>- <span id="deezSalmonGuyCost">7500000000</span> Salmons</button>
+					<button onclick="buy('SalmonTimeTravel')" class="buySalmonTimeTravel" style="display:none;background-color: #96281B"><b>Time Travelling Salmons</b><br>(+<span id="SalmonTimeTravelDamage"> </span> Salmons/sec)<br>- <span id="SalmonTimeTravelCost">1000000000000</span> Salmons</button>
+					<button onclick="buy('SalmonUniversalDomination')" class="buySalmonUniversalDomination" style="display:none;background-color: #72231a"><b>Universal Salmon Domination</b><br>(+<span id="SalmonUniversalDominationDamage"> </span> Salmons/sec)<br>- <span id="SalmonUniversalDominationCost">40000000000000</span> Salmons</button>
+					<button onclick="buy('SalmonGod')" class="buySalmonGod" style="display:none;background-color: #2d0e0b"><b>Salmon God</b><br>(+<span id="SalmonGodDamage"> </span> Salmons/sec)<br>- <span id="SalmonGodCost">170000000000000</span> Salmons</button>
+					<button onclick="buy('SalmonAfterlife')" id="redglow" class="buySalmonAfterlife" style="display:none;background-image:url('images/colours.gif');-webkit-backface-visibility: hidden;"><b>Salmon Afterlife</b><br>(+<span id="SalmonAfterlifeDamage"> </span> Salmons/sec)<br>- <span id="SalmonAfterlifeCost">2000000000000000</span> Salmons</button>
+				</div>
+
+				<div id="bottomLeft">
+					<button onclick="showMenu()" class="button" style="padding:1px 5px">show menu</button>
+					<span id="menu" style="left:85px">
+						<button onclick="Save()" class="button" id="menuButton">save</button>
+						<button onclick="DeleteSave()" class="button" id="menuButton2">delete save</button>
+						<button onclick="Load()" class="button" id="menuButton3">load save</button>
+					</span>
+				</div>
+
+				<div id="bottomRight" align="right">
+					<span id="saved"></span>
+				</div>
+
+				<button id="gamblingButton" onclick="ShowGambling()" class="button" style="display:none;position:absolute;top:12%;left:40.5%;z-index:999;padding:1.5vw 2.5vw;background-color:#D35400">gamble</button>
+				<div id="gambling">
+					<div style="font-size:6vw;font-weight:bold;position:relative;bottom:8px;text-align:center">Salmon gambling</div>
+					exact Salmons: <span id="SalmonsGamble" style="pointer-events:auto">0</span>
+					<br>
+
+					<hr size="1" noshade color=black>
+					25% chance to get 3x
+					<br>
+					<button onclick="Gamble(1)" style="position:relative;top:-0.5vw;width:100%;background-color:#bababa">gamble</button>
+					<br>
+
+					<hr size="1" noshade color=black>
+					12% chance to get 6x
+					<br>
+					<button onclick="Gamble(2)" style="position:relative;top:-0.5vw;width:100%;background-color:#a3a3a3">gamble</button>
+					<br>
+
+					<hr size="1" noshade color=black>
+					6% chance to get 12x
+					<br>
+					<button onclick="Gamble(3)" style="position:relative;top:-0.5vw;width:100%;background-color:#777777">gamble</button>
+					<br>
+
+					<hr size="1" noshade color=black>
+					3% chance to get 24x
+					<br>
+					<button onclick="Gamble(4)" style="position:relative;top:-0.5vw;width:100%;background-color:#595959">gamble</button>
+					<br>
+
+					<hr size="1" noshade color=black>
+					1% chance to get 50x
+					<br>
+					<button onclick="Gamble(5)" style="position:relative;top:-0.5vw;width:100%;background-color:#262626">gamble</button>
+					<br>
+
+					<hr size="1" noshade color=black>
+					scissors paper rock for 2.5x Salmons
+					<br>
+					<button onclick="ScissorsPaperRock('scissors')" style="position:relative;top:-0.5vw;width:32.3%;background-color:#95A5A6">scissors</button>
+					<button onclick="ScissorsPaperRock('paper')" style="position:relative;top:-0.5vw;width:32.3%;background-color:#BFBFBF">paper</button>
+					<button onclick="ScissorsPaperRock('rock')" style="position:relative;top:-0.5vw;width:32.3%;background-color:#6C7A89">rock</button>
+					<br>
+				</div>
+
+				<button onclick="ShowPrestige()" id="prestigeButton" class="button" style="display:none;position:absolute;top:12%;left:57.5%;z-index:999;padding:1.5vw 2.5vw">prestige</button>
+				<div id="prestige">
+					<div style="font-size:6vw;font-weight:bold;position:relative;bottom:8px;text-align:center">prestige</div>
+					current level: <span id="prestigeLevel">0</span>
+					<br>
+					current total Salmons/sec: <span id="prestigeDamage">0</span>
+					<br>
+					prestige to gain a permanent <span id="prestigeGain">0</span>x Salmons/sec increase
+					<br>
+
+					<button class="button" onclick="Prestige()" style="width:100%;height:7vw">prestige</button>
+				</div>
+
+				<div id="prestigeGainDiv">
+					<span style="position:relative;top:3%"><span id="prestigeGainText"></span> x bonus Salmons/sec from prestige</span>
+				</div>
+			</main>
+		</div>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
